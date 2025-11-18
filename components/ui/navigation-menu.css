@@ -1,0 +1,97 @@
+/* ----------------------------------------------------------
+   COMPONENT OVERRIDES
+-------------------------------------------------------------*/
+
+/* Navigation Menu */
+.navigation-menu__viewport {
+  @apply absolute top-full left-0 bg-white rounded-xl border border-border 
+         shadow-lg overflow-hidden;
+  width: var(--radix-navigation-menu-viewport-width);
+  height: var(--radix-navigation-menu-viewport-height);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.navigation-menu__viewport[data-state="open"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigation-menu__content {
+  @apply bg-white rounded-xl p-3;
+}
+
+.navigation-link {
+  @apply px-4 py-2.5 rounded-lg text-sm font-medium text-gray-700 
+         hover:bg-primary-50 hover:text-primary-600 
+         transition-all duration-150;
+}
+
+/* Buttons */
+button, .button {
+  @apply font-medium transition-all duration-200;
+}
+
+/* Inputs */
+input, textarea, select {
+  @apply border-border focus:border-primary-500 focus:ring-2 
+         focus:ring-primary-100 transition-all duration-150;
+}
+
+/* Links */
+a {
+  @apply text-primary-600 hover:text-primary-700 transition-colors duration-150;
+}
+
+/* Images */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE UTILITIES
+-------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+
+  .section-padding {
+    @apply py-12;
+  }
+}
+
+/* ----------------------------------------------------------
+   ACCESSIBILITY
+-------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-500;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  @apply absolute -top-full left-0 bg-primary-600 text-white px-4 py-2 
+         focus:top-0 z-50;
+}
+
+/* Fix transparent dropdown */
+.nav-mega-menu {
+  @apply bg-white border border-gray-200 shadow-xl rounded-xl;
+}
+
+/* Clean trigger styling */
+.nav-trigger {
+  @apply text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg font-medium;
+}

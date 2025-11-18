@@ -1,26 +1,92 @@
-@import "tailwindcss";
+/* ----------------------------------------------------------
+   TAILWIND v4 REQUIRED IMPORTS
+-------------------------------------------------------------*/
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Dark mode variant */
+@custom-variant dark (&:is(.dark *));
 
+/* ----------------------------------------------------------
+   YOUR DESIGN TOKENS (colors, fonts, spacing, etc)
+-------------------------------------------------------------*/
 @theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-poppins);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ----------------------------------------------------------
+   ROOT VARIABLES
+-------------------------------------------------------------*/
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --primary: #0066ff;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f5f5f5;
+  --secondary-foreground: #333;
+
+  --muted: #f6f6f6;
+  --muted-foreground: #666;
+
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #88aaff;
+}
+
+/* DARK THEME OVERRIDES */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --primary: #80b3ff;
+  --primary-foreground: #000;
+
+  --muted: #222;
+  --muted-foreground: #aaa;
+
+  --border: #333;
+  --input: #333;
+  --ring: #3355ff;
+}
+
+/* ----------------------------------------------------------
+   BASE STYLES RESTORED (ShadCN compatibility)
+-------------------------------------------------------------*/
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ----------------------------------------------------------
+   OPTIONAL — ShadCN Animations
+-------------------------------------------------------------*/
+@layer utilities {
+  .animate-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
