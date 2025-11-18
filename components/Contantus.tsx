@@ -30,8 +30,8 @@ export default function ContactPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              Whether you're exploring partnerships, need support, or want to learn
-              more about our products — we're here to help you.
+              Whether you're exploring partnerships, need support, or want to
+              learn more about our products — we're here to help you.
             </p>
           </motion.div>
         </div>
@@ -55,9 +55,11 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">Office Address</h3>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
+                      Office Address
+                    </h3>
                     <p className="text-gray-700">
-                      BlueJay Innovative Labs Pvt Ltd  
+                      BlueJay Innovative Labs Pvt Ltd
                       <br />
                       Hyderabad, Telangana, India
                     </p>
@@ -70,11 +72,18 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+91" className="text-blue-600 hover:text-blue-700 font-medium">
+                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
+                      Phone
+                    </h3>
+                    <a
+                      href="tel:+91"
+                      className="text-blue-600 hover:text-blue-700 font-medium"
+                    >
                       +91 —————
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">Mon-Fri, 9AM-6PM IST</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Mon-Fri, 9AM-6PM IST
+                    </p>
                   </div>
                 </div>
 
@@ -84,11 +93,18 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:support@bluejayinnolabs.com" className="text-blue-600 hover:text-blue-700 font-medium">
+                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
+                      Email
+                    </h3>
+                    <a
+                      href="mailto:support@bluejayinnolabs.com"
+                      className="text-blue-600 hover:text-blue-700 font-medium"
+                    >
                       support@bluejayinnolabs.com
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      We'll respond within 24 hours
+                    </p>
                   </div>
                 </div>
 
@@ -98,7 +114,9 @@ export default function ContactPage() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">Business Hours</h3>
+                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
+                      Business Hours
+                    </h3>
                     <p className="text-gray-700">
                       Monday - Friday: 9:00 AM - 6:00 PM
                       <br />
@@ -119,7 +137,7 @@ export default function ContactPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 z-10"></div>
                 <Image
-                  src="/images/contact/customer-support.jpg"
+                  src="/Customer-Support-Team.jpg"
                   alt="Customer Support Team"
                   fill
                   className="object-cover"
@@ -136,7 +154,7 @@ export default function ContactPage() {
                 className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200 space-y-6"
                 onSubmit={(e) => {
                   e.preventDefault();
-                  alert('Form submitted! We will get back to you soon.');
+                  alert("Form submitted! We will get back to you soon.");
                 }}
               >
                 <div className="space-y-2">
@@ -144,7 +162,8 @@ export default function ContactPage() {
                     Send Us a Message
                   </h2>
                   <p className="text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible
+                    Fill out the form below and we'll get back to you as soon as
+                    possible
                   </p>
                 </div>
 
@@ -229,7 +248,8 @@ export default function ContactPage() {
                 </button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  By submitting this form, you agree to our Privacy Policy and Terms of Service
+                  By submitting this form, you agree to our Privacy Policy and
+                  Terms of Service
                 </p>
               </form>
             </motion.div>
@@ -238,25 +258,21 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section (Optional) */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section>
+        <div className="container px-20 pb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-xl overflow-hidden"
           >
-            <div className="aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center">
-              <div className="text-center p-8">
-                <MapPin className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Find Us in Hyderabad
-                </h3>
-                <p className="text-gray-600">
-                  Map integration coming soon
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475.78544583164745!2d78.38274852641119!3d17.446136717397565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f99f76919f%3A0x5d051fb3c5688b4d!2sFervid%20Smart%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1763442982073!5m2!1sen!2sin"
+              width="100%"
+              height="420"
+              className="border-0"
+              loading="lazy"
+            ></iframe>
           </motion.div>
         </div>
       </section>

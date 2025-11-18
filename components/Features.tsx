@@ -12,6 +12,7 @@ import {
   Zap,
   Award
 } from 'lucide-react';
+import Link from 'next/link';
 
 const features = [
   {
@@ -72,7 +73,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="services" className="py-10 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +105,7 @@ export default function Features() {
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
               className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
             >
-              {/* Icon */}
+              <Link href={'/product/productavs'}>
               <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
@@ -116,7 +117,7 @@ export default function Features() {
               <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
-
+</Link>
               {/* Hover Effect Border */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/0 to-purple-500/0 group-hover:from-primary-500/5 group-hover:to-purple-500/5 transition-all duration-300 pointer-events-none"></div>
             </motion.div>
